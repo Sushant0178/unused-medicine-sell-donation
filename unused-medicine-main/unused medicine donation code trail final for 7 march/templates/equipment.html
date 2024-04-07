@@ -1,0 +1,236 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
+    {% comment %} <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> {% endcomment %}
+    
+    <title>Document</title> 
+    <style>
+        
+      body{
+          
+        background: url('/static/images/oo.jpg')no-repeat ;
+        background-size: 100%;
+
+      }
+      </style>
+
+
+    </head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
+    
+    <nav class="navbar text-bg-success mb-1" data-bs-theme="dark">
+        <div class="text-bg-success"><h4>UNUSED MEDICINE DONATION SYSTEM</h4></div>
+        <form method="get" action="/search_equiments" class="d-flex" role="search">
+            <input class="form-control " type="search" placeholder="Search" aria-label="Search" name="query" id="query">
+            <button class="btn btn-outline-light" type="submit">Search</button>
+          </form>
+       
+      </nav>
+      <div class="container mr-2">
+      <div class="row">
+        <div class="col-md-3">
+         <img src="{% static 'images/bad.jpg' %}" class="img-fluid" style="width: 15rem; height:15rem" alt="No Image Uploaded">
+        <div class="card-body m-6">
+          <p class="text-bg-success mb-3"><h4>ICU Bad</h4><h6>70% off</h6></p>
+          <div class="container">
+            <div class="row">
+              <div class="col-md-4">
+                <a href="{% url 'equipment_buy' %}">
+                  <button type="button" class="btn btn-success">BUY</button>
+                </a>
+                </div>
+              <div class="col-md-4">
+                <a href="{% url 'cipla_details' %}">
+                    <button class="btn btn-success ">Details</button>
+                  </a>
+               </div>
+            </div>
+          </div>
+        </div></div>
+
+
+      <div class="col-md-3">
+      <img src="{% static 'images/endoscope.jpg' %}" class="img-fluid" style="width: 15rem; height:15rem" alt="No Image Uploaded">
+        <div class="card-body m-6">
+          <p class="card-text"><h4>Endoscope</h4><h6>80% off</h6></p>
+         <div class="container mt-1">
+            <div class="row">
+              <div class="col-md-4">
+                <a href="{% url 'equipment_buy' %}">
+                  <button type="button" class="btn btn-success">BUY</button>
+                </a>
+            
+              </div>
+              <div class="col-md-4">
+               <a href="{% url 'fever_details' %}">
+                  <button class="btn btn-success ">Details</button>
+                </a> 
+              </div>
+            </div>
+          </div>
+         </div> </div>
+
+
+      <div class="col-md-3">
+        <img src="{% static 'images/n.jpg' %}" class="img-fluid" style="width: 15rem; height:15rem" alt="No Image Uploaded">
+          <div class="card-body m-6">
+            <p class="card-text"><h4>Stethiscope</h4><h6>60% off</h6></p>
+            <div class="container mt-1">
+              <div class="row">
+                <div class="col-md-4">
+                  <a href="{% url 'equipment_buy' %}">
+                    <button type="button" class="btn btn-success">BUY</button>
+                  </a>
+                </div>
+                <div class="col-md-4">
+                  <a href="{% url 'paracetamol' %}">
+                    <button class="btn btn-success ">Details</button>
+                  </a> 
+                </div>
+              </div>
+            </div>
+        </div> </div>
+
+
+
+
+        
+           <div class="col-md-3">
+          <img src="{% static 'images/surgery.jpg' %}" class="img-fluid" style="width: 15rem; height:15rem" alt="No Image Uploaded">
+            <div class="card-body m-6">
+              <p class="card-text"><h4>Surgery Equipments</h4><h6>70% off</h6></p>
+              <div class="container mt-1">
+                <div class="row">
+                  <div class="col-md-4">
+                    <a href="{% url 'equipment_buy' %}">
+                      <button type="button" class="btn btn-success">BUY</button>
+                    </a>
+                  </div>
+                  <div class="col-md-4">
+                    <a href="{% url 'midodrine' %}">
+                      <button class="btn btn-success ">Details</button>
+                    </a> 
+                  </div>
+                </div>
+              </div>
+             </div></div></div>
+
+
+
+
+             <div class="container mt-4">
+
+              <div class="row">
+                <div class="col-md-3">
+                 <img src="{% static 'images/bp1.jpg' %}" class="img-fluid" style="width: 15rem; height:15rem" alt="No Image Uploaded">
+                <div class="card-body m-6">
+                  <p class="text-bg-success mb-3"><h4>BP Machine</h4><h6>70% off</h6></p>
+                  <div class="container mt-1">
+                    <div class="row">
+                      <div class="col-md-4">
+                        <a href="{% url 'equipment_buy' %}">
+                          <button type="button" class="btn btn-success">BUY</button>
+                        </a>
+                      </div>
+                      <div class="col-md-4">
+                        <a href="{% url 'para500mg' %}">
+                          <button class="btn btn-success ">Details</button>
+                        </a> 
+                      </div>
+                    </div>
+                  </div>
+                </div></div>
+        
+        
+              <div class="col-md-3">
+              <img src="{% static 'images/weight.jpg' %}" class="img-fluid" style="width: 15rem; height:15rem" alt="No Image Uploaded">
+                <div class="card-body m-6">
+                  <p class="card-text"><h4>weight Machine</h4><h6>80% off</h6></p>
+                 <div class="container mt-1">
+                    <div class="row">
+                      <div class="col-md-4">
+                        <a href="{% url 'equipment_buy' %}">
+                        <button type="button" class="btn btn-success">BUY</button>
+                      </a>
+                      </div>
+                      <div class="col-md-4">
+                        <a href="{% url 'dolo' %}">
+                          <button class="btn btn-success ">Details</button>
+                        </a> 
+                      </div>
+                    </div>
+                  </div>
+                 </div> </div>
+        
+        
+              <div class="col-md-3">
+                <img src="{% static 'images/wheel.jpeg' %}" class="img-fluid" style="width: 15rem; height:15rem" alt="No Image Uploaded">
+                  <div class="card-body m-6">
+                    <p class="card-text"><h4>Wheel Chair</h4><h6>60% off</h6></p>
+                    <div class="container mt-1">
+                      <div class="row">
+                        <div class="col-md-4">
+                          <a href="{% url 'equipment_buy' %}">
+                            <button type="button" class="btn btn-success">BUY</button>
+                          </a>
+                        </div>
+                        <div class="col-md-4">
+                         <a href="{% url 'vnydaqel' %}">
+                            <button class="btn btn-success ">Details</button>
+                          </a> 
+                        </div>
+                      </div>
+                    </div> 
+                  </div> </div>
+                   
+
+
+
+                
+        
+        
+        
+        
+                
+                   <div class="col-md-3">
+                  <img src="{% static 'images/ivstand.jpeg' %}" class="img-fluid" style="width: 15rem; height:15rem" alt="No Image Uploaded">
+                    <div class="card-body m-6">
+                      <p class="card-text"><h4>IV-Stand</h4><h6>70% off</h6></p>
+                      <div class="container mt-1">
+                        <div class="row">
+                          <div class="col-md-4">
+                            <a href="{% url 'equipment_buy' %}">
+                              <button type="button" class="btn btn-success">BUY</button>
+                            </a>
+                          </div>
+                          <div class="col-md-4">
+                            <a href="{% url 'carvedilol' %}">
+                              <button class="btn btn-success ">Details</button>
+                            </a> 
+                          </div>
+                        </div>
+                      </div>
+                     </div></div></div>
+
+                     <script src="{% static 'js/jquery.js' %}"></script>
+                <script src="{% static 'js/popper.js' %}"></script>
+                <script src="{% static 'js/bootstrap.js' %}"></script>
+                <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+                
+              
+            </div> </div></div> </div></div>
+          </div>
+        </div>
+
+        
+</body>
+</html>

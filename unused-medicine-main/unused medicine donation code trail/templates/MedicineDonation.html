@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Medicine Donation Form</title>
+
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="/static/profile/css/style.css">
+
+    <!-- Add jQuery (you can change the version or use a CDN) -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+    <style>
+        /* Add any additional styles if needed */
+    </style>
+</head>
+<body>
+
+    <div class="main">
+
+        <section class="signup">
+            <div class="container">
+                <div class="signup-content">
+                    <form method="POST" id="signup-form" class="signup-form" onsubmit="return validateForm()">
+                        {% csrf_token %}
+                        <h2 class="form-title">FILL THE DETAILS OF MEDICINE</h2>
+                        <div class="form-group">
+                            <input type="text" class="form-input" name="medicinename" id="medicinename" placeholder="Medicine Name"/>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-input" name="companyname" id="companyname" placeholder="Company Name"/>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-input" name="manufacturing" id="manufacturing" placeholder="Manufacturing Date (YYYY-MM-DD)"/>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-input" name="expiry" id="expiry" placeholder="Expiry Date (YYYY-MM-DD)" />
+                        </div>
+                        <div class="form-group">
+                            <input type="number" name="tablets" id="tablets" class="form-input" placeholder="Number of Tablets" />
+                        </div>
+                        <div class="form-group">
+                            
+                            <input type="submit" name="submit" id="submit" class="form-submit" value="Submit"/>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <script>
+        function validateForm() {
+            // Get the input values
+            var manufacturing = document.getElementById("manufacturing").value;
+            var expiry = document.getElementById("expiry").value;
+
+            // Validate date format (YYYY-MM-DD)
+            if (!isValidDateFormat(manufacturing) || !isValidDateFormat(expiry)) {
+                alert("Please enter dates in the format YYYY-MM-DD.");
+                return false;
+            }
+
+            // Additional validation logic if needed
+
+            return true;
+        }
+
+        function isValidDateFormat(dateString) {
+            var regex = /^\d{4}-\d{2}-\d{2}$/;
+            return regex.test(dateString);
+        }
+    </script>
+
+</body>
+</html>
