@@ -50,9 +50,6 @@ def registerdonor(request):
     context = {'form': form}
     return render(request, 'registerdonor.html', context)
 
-
-
-
 @unauthenticated_user
 def registerseller(request):
     form = CreateUserForm()
@@ -234,8 +231,6 @@ def ngodashboard(request):
     #     # name=donordetail.object
 
     # context={'posts':posts}
-        
-
 
     return render(request, 'NGOdashboard1.html', context)
     # return HttpResponse("this is logout page")
@@ -836,3 +831,5 @@ def show_user(request):
 def show_doctor(request):
     medicines = Doctorinformation.objects.all()
     return render(request, 'show_doctor.html', {'medicines': medicines})
+
+

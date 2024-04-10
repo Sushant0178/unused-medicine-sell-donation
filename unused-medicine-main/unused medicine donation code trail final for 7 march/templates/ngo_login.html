@@ -9,7 +9,37 @@
   <link href="{% static 'css/style12.css' %}" rel="stylesheet">
   <title>Document</title>
 </head>
-
+<style>
+        
+  body{
+      
+    background: url('/static/images/bh.png')no-repeat ;
+    background-size: 110%;
+  
+  }
+  .container{
+      /* background-color: #fff; */
+      margin-right:57%;
+      width: 35%;
+      margin-top: 15vh;
+      margin-bottom: 25px;
+      border:0px solid #fff; padding:20px 30px;
+      {% comment %} -webkit-box-shadow: -1px 4px 26px 11px rgba(0,0,0,0.75);
+  -moz-box-shadow: -1px 4px 26px 11px rgba(0,0,0,0.75);
+  box-shadow: -1px 4px 26px 11px rgba(0,0,0,0.75);
+   {% endcomment %}
+  
+  }
+  *{
+      color:white;
+  }
+  h1{
+      text-align: center;
+  }
+  .hh{
+      margin-left: 70%;
+  }
+      </style>
 <body>
     {% if messages %}{% for message in messages %}<script>alert("{{ message }}");</script>{% endfor %}{% endif %}
   <div class="row">

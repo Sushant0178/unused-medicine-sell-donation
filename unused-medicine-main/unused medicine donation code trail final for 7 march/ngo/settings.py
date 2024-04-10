@@ -9,7 +9,7 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
-    'home.apps.HomeConfig',
+    'home.apps.HomeConfig',  # Assuming this is your custom app
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -56,6 +56,7 @@ DATABASES = {
 }
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
 AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
@@ -71,20 +72,13 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-LANGUAGE_CODE = 'en-in'  # Updated for India (en-us to en-in)
-
-TIME_ZONE = 'Asia/Kolkata'  # Updated for India (UTC to Asia/Kolkata)
-
+LANGUAGE_CODE = 'en-in'
+TIME_ZONE = 'Asia/Kolkata'
 USE_I18N = True
-
 USE_L10N = True
+USE_TZ = False
+DATE_FORMAT = 'Y-m-d'
 
-USE_TZ = False  # Updated to False to use the specified TIME_ZONE directly without timezone support
-
-# Date Format
-DATE_FORMAT = 'y-m-d'
-
-# Static files
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [
